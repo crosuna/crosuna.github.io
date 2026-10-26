@@ -545,6 +545,25 @@ p { text-wrap: pretty; }
   opacity: .88;
 }
 .feature-body a { color: var(--f-accent); }
+.feature-callout {
+  margin: 20px 0 4px;
+  max-width: 62ch;
+  padding: 16px 18px 17px;
+  border: 1px solid color-mix(in srgb, var(--f-accent) 45%, transparent);
+  border-left: 3px solid var(--f-accent);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--f-accent) 9%, transparent);
+}
+.fc-label {
+  margin: 0 0 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--f-accent);
+}
+.fc-text { margin: 0; font-size: 16px; line-height: 1.55; color: var(--f-ink); }
+.fc-text a { color: var(--f-accent); text-underline-offset: 3px; }
 .feature-status { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .feature .status { border-color: var(--f-line); color: var(--f-muted); }
 .feature .status.live::before { background: var(--f-live); }
