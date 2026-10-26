@@ -119,7 +119,7 @@
         <div class="hero-main">
           <p class="eyebrow"><span class="pulse" aria-hidden="true"></span><span>Software engineer · San Diego, CA</span></p>
           <h1 class="name"><span>Christopher</span> <em>Osuna</em></h1>
-          <p class="lede">I&#x27;m a systems analyst by day. The rest of the time I&#x27;m working on <a href="#metavault">MetaVault</a>, a Magic: The Gathering app I built on my own and got onto the App Store, or modding other games into Elden Ring for TikTok.</p>
+          <p class="lede">Systems analyst by day. The rest of the time I build <a href="#metavault">MetaVault</a>, my Magic: The Gathering app, and mod other games into Elden Ring.</p>
           <div class="cta-row">
             <a class="btn btn-solid" href="#work"><span>See my work</span></a>
             <a class="btn" href="https://www.meta-vault.app/" target="_blank" rel="noopener"><span>MetaVault</span><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -142,10 +142,10 @@
 
     <section class="stats" aria-label="Highlights">
       <div class="wrap stats-grid">
-        <div class="stat reveal"><b>82%</b><span>faster payment transaction resolution after I led our move to a new processor, with zero downtime</span></div>
-        <div class="stat reveal"><b>$3M</b><span>in sales from a single ticket event, through the virtual queue and upsell I set up</span></div>
-        <div class="stat reveal"><b>31M+</b><span>views on TikTok and X in under a month, driven by my Elden Ring mods</span></div>
-        <div class="stat reveal"><b>120K+</b><span>followers on my old gaming TikTok, built in just over a year</span></div>
+        <div class="stat reveal"><b>82%</b><span>faster payment resolution after a processor migration I led</span></div>
+        <div class="stat reveal"><b>$3M</b><span>in one ticket sale, through a virtual queue I built</span></div>
+        <div class="stat reveal"><b>31M+</b><span>views on my Elden Ring mods in under a month</span></div>
+        <div class="stat reveal"><b>120K+</b><span>followers on my old gaming TikTok</span></div>
       </div>
     </section>
 
@@ -154,7 +154,7 @@
         <div class="sec-head reveal">
           <span class="sec-num">01</span>
           <h2>Things I&#x27;ve built</h2>
-          <p>What I&#x27;ve shipped, and what I&#x27;m still working on.</p>
+          <p>Shipped, and still in progress.</p>
         </div>
 
         <article class="feature theme-rose has-screens reveal" id="metavault">
@@ -167,7 +167,7 @@
                   <h3>MetaVault</h3>
                 </div>
               </div>
-              <p class="feature-body">MetaVault is a Magic: The Gathering app. You can scan cards with your phone, see what your collection is worth, build decks, and track life totals in Commander games. I&#x27;m the only developer on it, so the web app, the iOS app, the backend, and getting through App Store review were all me.</p>
+              <p class="feature-body">A Magic: The Gathering app for scanning cards, tracking what your collection is worth, building decks, and running Commander games. I built all of it solo: web, iOS, and backend.</p>
               <div class="feature-status"><span class="status live">Live on the App Store</span><span class="status live">Live on the web</span></div>
               <div class="link-row"><a class="btn btn-f-primary" href="https://www.meta-vault.app/" target="_blank" rel="noopener"><span>meta-vault.app</span><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-f-ghost" href="https://apps.apple.com/us/app/metavault/id6781949538" target="_blank" rel="noopener"><span>App Store</span><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
             </div>
@@ -178,7 +178,7 @@
               <figure class="phone"><img src="assets/metavault/deck.webp" width="540" height="1170" loading="lazy" alt="The deck builder assembling a Commander deck from the user&#x27;s collection"><figcaption>Decks</figcaption></figure>
             </div>
           </div>
-          <ul class="feature-highlights"><li><h4>Card scanning</h4><p>Point your camera at a card and it&#x27;s in your collection a few seconds later. Apple Vision reads the text on the phone, then a fuzzy match against Scryfall picks the right card and scores how sure it is.</p></li><li><h4>Apple Wallet passes</h4><p>Your collection shows up as an Apple Wallet pass. The passes are generated in Deno edge functions and updated every night with signed APNs pushes (ES256 JWTs through WebCrypto).</p></li><li><h4>Live life tracker</h4><p>Everyone at the table sees the same game in real time, with turn tracking, life graphs, and a history of past games.</p></li><li><h4>Deck builder</h4><p>Pick a commander and it builds the deck from cards you already own first, then fills in the rest from what people actually play. It&#x27;s a rules engine on EDHREC and Commander Spellbook data with 72 tests, no AI model involved.</p></li><li><h4>Backend and security</h4><p>Supabase Postgres with row-level security, nightly pg_cron jobs that snapshot collection values, custom auth email with SPF and DKIM, and Sign in with Apple that revokes tokens when you delete your account.</p></li><li><h4>Shipping it</h4><p>The web app is React and Vite on AWS Amplify. The iOS app is React Native and Expo, built through EAS and TestFlight. There are 700+ automated tests running in CI.</p></li><li><h4>App Store review</h4><p>Apple rejected it twice, once over the wording on a permission prompt and once over a login freeze on a new iOS version. I fixed both and it shipped.</p></li><li><h4>Secret Lair browser</h4><p>Every Secret Lair drop, all 716 of them, matched to its cards by combining Scryfall and MTGJSON data.</p></li><li><h4>TCGplayer prices</h4><p>Card prices link to TCGplayer through an approved affiliate account.</p></li></ul>
+          <ul class="feature-highlights"><li><h4>Card scanning</h4><p>Apple Vision reads the card, then a fuzzy match against Scryfall finds it in seconds.</p></li><li><h4>Apple Wallet passes</h4><p>Your collection as a Wallet pass, refreshed every night with signed APNs pushes.</p></li><li><h4>Live life tracker</h4><p>Real-time game sync for the whole table, with life graphs and game history.</p></li><li><h4>Deck builder</h4><p>Builds a Commander deck from cards you own, using EDHREC and Commander Spellbook data.</p></li><li><h4>Backend</h4><p>Supabase Postgres with row-level security, edge functions, and nightly cron jobs.</p></li><li><h4>App Store review</h4><p>Rejected twice, fixed both, shipped. 700+ tests run in CI.</p></li></ul>
           <ul class="tags"><li>React</li><li>React Native</li><li>Expo</li><li>Supabase</li><li>PostgreSQL</li><li>Deno</li><li>AWS Amplify</li><li>PassKit</li><li>APNs</li><li>Scryfall API</li></ul>
         </article>
         <article class="feature theme-gold has-stats reveal" id="mods">
@@ -186,13 +186,13 @@
             <div class="feature-main">
               <p class="mono-label feature-label">Personal project · 2026</p>
               <h3>Elden Ring <em>mashups</em></h3>
-              <p class="feature-body">I&#x27;ve been putting characters and game modes from other games into Elden Ring and posting the results on TikTok and X. It&#x27;s a mod framework written in Rust, built with a lot of help from AI coding agents. Five of the clips are past a million views.</p>
-              <p class="feature-body">It started as Overwatch&#x27;s Doomfist in first person, with his real HUD, cooldowns, and abilities. Since then I&#x27;ve added Dragon Ball FighterZ combat, Cyberpunk&#x27;s Sandevistan, a Halo Banshee, and more. I try to make each one play the way it does in its own game.</p>
+              <p class="feature-body">Characters and game modes from other games, playable inside Elden Ring. Built in Rust with AI coding agents and posted on TikTok and X.</p>
+              <p class="feature-body">It started with Overwatch&#x27;s Doomfist. Now there&#x27;s Dragon Ball FighterZ, Cyberpunk&#x27;s Sandevistan, Halo, and more, each built to play like the original.</p>
               <div class="link-row"><a class="btn btn-f-primary" href="https://www.tiktok.com/@huberticus_" target="_blank" rel="noopener"><svg width="16" height="16" aria-hidden="true"><use href="#i-tiktok"/></svg><span>Watch on TikTok</span></a></div>
             </div>
-            <ul class="feature-stats" aria-label="Elden Ring mashups results"><li><b>24M+</b><span>TikTok views in under a month</span></li><li><b>7.5M</b><span>impressions on X in the same stretch</span></li><li><b>6.9M</b><span>views on the top clip</span></li><li><b>914K</b><span>shares on TikTok</span></li></ul>
+            <ul class="feature-stats" aria-label="Elden Ring mashups results"><li><b>24M+</b><span>TikTok views in under a month</span></li><li><b>7.5M</b><span>impressions on X</span></li><li><b>6.9M</b><span>views on the top clip</span></li><li><b>914K</b><span>shares on TikTok</span></li></ul>
           </div>
-          <ul class="feature-highlights"><li><h4>Pulling assets out of each game</h4><p>I wrote readers for each game&#x27;s file formats to get the models, animations, sounds, and HUD art out, like Fallout 4&#x27;s archives and Havok animations and Halo&#x27;s animation files. Unity games go through AssetRipper.</p></li><li><h4>My code, Elden Ring&#x27;s world</h4><p>Abilities, hit detection, physics, cameras, and HUDs are my own Rust code, timed off each game&#x27;s real frame data. Elden Ring just provides the world, the enemies, and collision.</p></li><li><h4>On TikTok so far</h4><p>Overwatch, Halo, Dragon Ball FighterZ, Cyberpunk 2077, Resident Evil 2, Zelda: Ocarina of Time in VR, and a Tesla Roadster.</p></li></ul>
+          <ul class="feature-highlights"><li><h4>Pulling assets out of each game</h4><p>I wrote my own readers for each game&#x27;s files to get the models, animations, sounds, and HUD art.</p></li><li><h4>My code, Elden Ring&#x27;s world</h4><p>Abilities, physics, cameras, and HUDs run in my Rust code. Elden Ring supplies the world.</p></li><li><h4>On TikTok so far</h4><p>Overwatch, Halo, Dragon Ball FighterZ, Cyberpunk 2077, Resident Evil 2, Zelda in VR, and a Tesla Roadster.</p></li></ul>
           <ul class="tags"><li>Rust</li><li>Python</li><li>Game hooking</li><li>Custom rendering</li><li>Animation retargeting</li><li>Asset pipelines</li><li>AI coding agents</li></ul>
         </article>
 
@@ -200,25 +200,25 @@
           <article class="card reveal">
             <span class="status live">Open source</span>
             <h4><a class="card-link" href="https://parsertime.app" target="_blank" rel="noopener"><span>Parsertime</span><svg width="15" height="15" aria-hidden="true"><use href="#i-arrow"/></svg></a></h4>
-            <p>I contribute to this open-source app that collegiate Overwatch teams use to review their scrims. I built the team and player performance stats.</p>
+            <p>Built team and player stats for an open-source scrim tool used by collegiate Overwatch teams.</p>
             <ul class="tags"><li>Next.js</li><li>Prisma</li><li>TypeScript</li></ul>
           </article>
           <article class="card reveal">
             <span class="status wip">In progress</span>
             <h4><span>All-in-one video editor</span></h4>
-            <p>A free desktop video editor I&#x27;m building because I wanted Premiere, After Effects, and CapCut in one app. Plugins are a big part of the design.</p>
+            <p>Premiere, After Effects, and CapCut in one free desktop app, built around plugins.</p>
             <ul class="tags"><li>C++</li><li>CMake</li></ul>
           </article>
           <article class="card reveal">
             <span class="status plan">Design phase</span>
             <h4><span>Roguelike 2.5D fighter</span></h4>
-            <p>A fighting game that plays like Dragon Ball FighterZ, except you build a deck of cards before the match and play them during the fight.</p>
+            <p>A Dragon Ball FighterZ-style fighter with a deck of cards you play mid-fight.</p>
             <ul class="tags"><li>Unreal Engine</li><li>Game design</li></ul>
           </article>
           <article class="card reveal">
             <span class="status live">Public repo</span>
             <h4><a class="card-link" href="https://github.com/crosuna/Overwatch" target="_blank" rel="noopener"><span>Overwatch asset tooling</span><svg width="15" height="15" aria-hidden="true"><use href="#i-arrow"/></svg></a></h4>
-            <p>How I get Overwatch assets for the mods. It&#x27;s a patched build of DataTool with a small menu and scripts that pull a whole hero at once.</p>
+            <p>A patched DataTool build and scripts that pull whole Overwatch heroes for the mods.</p>
             <ul class="tags"><li>Python</li><li>DataTool</li></ul>
           </article>
         </div>
@@ -238,7 +238,7 @@
             <div>
               <h3 class="xp-org">San Diego Zoo Wildlife Alliance</h3>
               <p class="xp-role">Systems Analyst I · previously Information Systems Engineer</p>
-              <ul class="bul"><li>Led the move to a new enterprise payment processor across our point-of-sale systems with zero downtime. Payment transactions now get resolved 82% faster, and we stayed PCI DSS compliant.</li><li>Set up a virtual queue with an upsell option for big ticket sales, including the traffic gating and load balancer config. The upsell brought in $3M in a single sales event.</li><li>Own the REST API integrations between our CRM and core systems and the SQL/ETL pipelines behind them, with monitoring that catches sync failures before they cause problems downstream.</li><li>Managed builds, staging, and UAT for a ticketing platform migration. Automated kiosk setup, deployments, and log collection with PowerShell and Intune.</li><li>Started as an Information Systems Engineer, rolling out security policies through cloud device management for security audits and CIS compliance testing.</li></ul>
+              <ul class="bul"><li>Led a zero-downtime payment processor migration. Transactions now resolve 82% faster, still PCI DSS compliant.</li><li>Set up a virtual queue and upsell for big ticket sales. The upsell brought in $3M in one event.</li><li>Own our CRM integrations and SQL/ETL pipelines, with monitoring that catches sync failures early.</li><li>Automate kiosk setup, deployments, and log collection with PowerShell and Intune.</li></ul>
             </div>
           </li>
           <li class="xp-item reveal">
@@ -246,7 +246,7 @@
             <div>
               <h3 class="xp-org">SDSU Research Foundation</h3>
               <p class="xp-role">Web Developer / Marketing Associate</p>
-              <ul class="bul"><li>Built React and TypeScript web apps with A/B testing and analytics for an early-stage startup, and used the results to shape the product before an investor demo that helped raise $100K+.</li><li>Handled their landing pages and SEO, and modeled and animated their product, an Apple Watch case for better biometric readings, in AutoCAD and Blender.</li></ul>
+              <ul class="bul"><li>Built React and TypeScript apps with A/B testing for a startup, ahead of an investor demo that helped raise $100K+.</li><li>Modeled and animated their product in AutoCAD and Blender.</li></ul>
             </div>
           </li>
           <li class="xp-item reveal">
@@ -254,7 +254,7 @@
             <div>
               <h3 class="xp-org">Jamul Casino</h3>
               <p class="xp-role">Software Engineering Intern</p>
-              <ul class="bul"><li>Built internal full-stack tools in React, TypeScript, Python, and SQL for a 24/7 regulated operation.</li><li>Helped with the site-wide tech rollout, including network setup and documentation for training staff, and set up accounts and workstations for new hires.</li></ul>
+              <ul class="bul"><li>Built internal full-stack tools in React, TypeScript, Python, and SQL.</li><li>Helped run the site-wide tech rollout and new-hire setup.</li></ul>
             </div>
           </li>
           <li class="xp-item reveal">
@@ -262,7 +262,7 @@
             <div>
               <h3 class="xp-org">University of San Diego</h3>
               <p class="xp-role">Information Technology Intern</p>
-              <ul class="bul"><li>Hands-on hardware and software support for end users.</li></ul>
+              <ul class="bul"><li>Hands-on hardware and software support.</li></ul>
             </div>
           </li>
           <li class="xp-item reveal">
@@ -270,7 +270,7 @@
             <div>
               <h3 class="xp-org">SDSU Esports</h3>
               <p class="xp-role">Coordinator, Broadcast Director &amp; Social Media Manager</p>
-              <ul class="bul"><li>Directed live broadcasts for Overwatch, VALORANT, and Smash Ultimate and ran the tech side with the crew in real time.</li><li>Ran the program&#x27;s social media, including graphics, multi-camera edits, live streams, and tournament promotion.</li><li>Coached the Overwatch Varsity and JV teams from 2019 to 2021.</li></ul>
+              <ul class="bul"><li>Directed live broadcasts for Overwatch, VALORANT, and Smash Ultimate.</li><li>Ran the program&#x27;s social media and content.</li><li>Coached the Overwatch Varsity and JV teams, 2019 to 2021.</li></ul>
             </div>
           </li>
         </ol>
@@ -286,8 +286,8 @@
 
         <div class="split">
           <div class="edu reveal">
-            <div class="edu-item"><p class="edu-meta">In progress</p><h3>Johns Hopkins University</h3><p class="edu-deg">M.S., Computer Science</p><p class="edu-note">Engineering for Professionals. Fall 2026: Foundations of Software Engineering, Computer Architecture, and Algorithms.</p></div>
-            <div class="edu-item"><p class="edu-meta">2021</p><h3>San Diego State University</h3><p class="edu-deg">B.A., Communications</p><p class="edu-note">Focused on video, graphics, and marketing. Dean&#x27;s List in 2020.</p></div>
+            <div class="edu-item"><p class="edu-meta">In progress</p><h3>Johns Hopkins University</h3><p class="edu-deg">M.S., Computer Science</p><p class="edu-note">Fall 2026: Software Engineering, Computer Architecture, Algorithms.</p></div>
+            <div class="edu-item"><p class="edu-meta">2021</p><h3>San Diego State University</h3><p class="edu-deg">B.A., Communications</p><p class="edu-note">Dean&#x27;s List, 2020.</p></div>
             <div class="edu-item"><p class="edu-meta">2024 · 2025</p><h3>Grossmont College</h3><p class="edu-deg">A.S., Computer Science · A.S., Cybersecurity &amp; Networking</p></div>
             <div class="edu-item"><p class="edu-meta">Certifications</p><p class="edu-deg">Google Data Analytics · AWS Solutions Architect Associate (in progress)</p></div>
           </div>
@@ -308,7 +308,7 @@
         <div class="sec-head reveal">
           <span class="sec-num">04</span>
           <h2>Esports &amp; community</h2>
-          <p>I spent five years in collegiate esports before I got into software. I coached, ran broadcasts, organized tournaments, and made a lot of the content.</p>
+          <p>Five years in collegiate esports before I got into software.</p>
         </div>
 
         <ul class="comm">
@@ -318,31 +318,31 @@
           </li>
           <li class="comm-item reveal">
             <span class="comm-tag">2019–21</span>
-            <div><h4>SDSU Esports coach</h4><p>Coached the Overwatch Varsity and Junior Varsity teams.</p></div>
+            <div><h4>SDSU Esports coach</h4><p>Overwatch Varsity and JV.</p></div>
           </li>
           <li class="comm-item reveal">
             <span class="comm-tag">Volunteer</span>
-            <div><h4>DreamHack San Diego</h4><p>Volunteered as a tournament organizer. I kept matches on schedule, helped the broadcast and stream crew, and handled rules questions from players.</p></div>
+            <div><h4>DreamHack San Diego</h4><p>Volunteer tournament organizer. Ran the schedule and handled player rulings.</p></div>
           </li>
           <li class="comm-item reveal">
             <span class="comm-tag">Volunteer</span>
-            <div><h4>Legend Gaming Center</h4><p>Organized tournaments and was the in-game director for the live broadcast at weekly LANs with 100+ players. Also did outreach to local colleges and players.</p></div>
+            <div><h4>Legend Gaming Center</h4><p>Tournament organizer and broadcast in-game director for weekly 100+ player LANs.</p></div>
           </li>
           <li class="comm-item reveal">
             <span class="comm-tag">Charity</span>
-            <div><h4>Extra Life</h4><p>24-hour charity streams with our esports team for children&#x27;s hospitals. We beat our goal two years in a row.</p></div>
+            <div><h4>Extra Life</h4><p>24-hour charity streams for children&#x27;s hospitals. Beat our goal two years running.</p></div>
           </li>
           <li class="comm-item reveal">
             <span class="comm-tag">2022</span>
-            <div><h4>Elden Ring, the hard way</h4><p>Beat Elden Ring with a Guitar Hero controller and blindfolded, and the videos of it went viral.</p></div>
+            <div><h4>Elden Ring, the hard way</h4><p>Beat it with a Guitar Hero controller and blindfolded. The videos went viral.</p></div>
           </li>
           <li class="comm-item reveal">
             <span class="comm-tag">Creator</span>
-            <div><h4>Gaming TikTok</h4><p>Grew my old account to 120K+ followers and 20M+ likes in a little over a year with gaming, skit, and gym videos.</p></div>
+            <div><h4>Gaming TikTok</h4><p>120K+ followers and 20M+ likes in about a year.</p></div>
           </li>
           <li class="comm-item reveal">
             <span class="comm-tag">Ranked</span>
-            <div><h4>Still competing</h4><p>Immortal 3 in VALORANT. Played collegiate Overwatch at Tier 2 and Tier 3.</p></div>
+            <div><h4>Still competing</h4><p>VALORANT Immortal 3. Collegiate Overwatch, Tier 2 and 3.</p></div>
           </li>
         </ul>
       </div>
@@ -358,9 +358,8 @@
         <div class="about-grid">
           <p class="about-quote reveal">Most of what I build started as something I wanted for <em>myself</em>.</p>
           <div class="about-body reveal">
-            <p>I&#x27;m a systems analyst at San Diego Zoo Wildlife Alliance, mostly working on payments and ticketing. Outside of work I&#x27;m usually working on MetaVault or a new Elden Ring mod, and I&#x27;m taking classes toward my master&#x27;s at Johns Hopkins.</p>
-            <p>I got into software through esports and video editing. My degree is in Communications, and I spent five years running broadcasts and making content for SDSU Esports. That&#x27;s probably why I care so much about how things look.</p>
-            <p>I use the Claude API at work and AI coding agents on my own projects. Wanting to understand how those systems actually work is a big reason I went back for my master&#x27;s.</p>
+            <p>I came to software from esports and video editing, so I care a lot about how things look. These days I&#x27;m a systems analyst at San Diego Zoo Wildlife Alliance, and I build MetaVault and Elden Ring mods on the side.</p>
+            <p>I use Claude at work and AI coding agents on my own projects. I&#x27;m doing my master&#x27;s at Johns Hopkins to understand how they actually work.</p>
             <p class="mono-label about-label">Off the clock</p>
             <ul class="tags"><li>Programming</li><li>Bodybuilding</li><li>Esports</li><li>Magic: The Gathering</li><li>English and Spanish</li></ul>
           </div>
