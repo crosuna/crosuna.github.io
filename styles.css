@@ -251,6 +251,42 @@ p { text-wrap: pretty; }
   align-items: end;
 }
 
+.press {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  margin: 0 0 28px;
+  padding: 7px 16px 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 14px;
+}
+.press-label {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.press-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+.press-link + .press-link { padding-left: 14px; border-left: 1px solid var(--line); }
+.press-note { font-weight: 400; color: var(--muted); }
+/* Three or more mentions: drop the notes so the strip stays on one line. */
+.press:has(.press-link:nth-of-type(3)) .press-note { display: none; }
+.press-link svg { color: var(--muted); transition: transform .2s, color .2s; }
+.press-link:hover, .press-link:hover svg { color: var(--accent); }
+.press-link:hover svg { transform: translate(2px, -2px); }
+
 .eyebrow {
   display: flex;
   align-items: center;
@@ -860,7 +896,7 @@ p { text-wrap: pretty; }
 
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--fl-cols, 4), minmax(0, 1fr));
   border-top: 1px solid color-mix(in srgb, var(--bg) 16%, var(--ink));
   border-bottom: 1px solid color-mix(in srgb, var(--bg) 16%, var(--ink));
 }
@@ -982,6 +1018,10 @@ p { text-wrap: pretty; }
 
 @media (max-width: 640px) {
   body { font-size: 16px; }
+  .press-note { display: none; }
+  .press { border-radius: 16px; padding: 10px 16px 11px; }
+  .press-label { flex-basis: 100%; }
+  .press-label + .press-link { padding-left: 0; border-left: 0; }
   .cta-row { gap: 8px; }
   .cta-row .btn { padding: 0 15px; }
   .cta-row .btn svg { display: none; }
