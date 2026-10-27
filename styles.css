@@ -251,12 +251,19 @@ p { text-wrap: pretty; }
   align-items: end;
 }
 
+.press-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 18px;
+  margin: 0 0 28px;
+}
 .press {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 6px 14px;
-  margin: 0 0 28px;
+  margin: 0;
   padding: 7px 16px 7px 14px;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -286,6 +293,68 @@ p { text-wrap: pretty; }
 .press-link svg { color: var(--muted); transition: transform .2s, color .2s; }
 .press-link:hover, .press-link:hover svg { color: var(--accent); }
 .press-link:hover svg { transform: translate(2px, -2px); }
+/* Outlets that covered the trend without naming the work: same row, no pill. */
+.press-quiet { background: none; border-color: transparent; }
+.press-quiet .press-link { font-weight: 500; color: var(--ink-2); }
+
+.press-link { position: relative; }
+.press-card {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -14px;
+  z-index: 40;
+  display: block;
+  width: 320px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 22px 48px -18px rgba(0, 0, 0, .45);
+  color: var(--ink);
+  font-weight: 400;
+  text-align: left;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s;
+}
+.press-link:hover .press-card,
+.press-link:focus-visible .press-card {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity .18s ease, transform .18s ease;
+}
+.press-card img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.pc-tile {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-2);
+  font-family: var(--serif);
+  font-size: 46px;
+  letter-spacing: -.01em;
+}
+.pc-body { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px; }
+.pc-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.pc-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.2;
+}
+.pc-text { font-size: 13.5px; line-height: 1.45; color: var(--ink-2); }
+@media (hover: none) { .press-card { display: none; } }
 
 .eyebrow {
   display: flex;
